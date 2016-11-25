@@ -1,0 +1,25 @@
+Calvin College CS 336
+Mark Davis mjd85
+Lab 8
+
+Exercise 8.2
+
+a) 
+i. The UI is composable because UI is made up of different components. The comment box is made up of two components: the comment list and comment form. This is important becuase the manipulation of the UI is simplified to changing just small blocks of code.
+
+ii. JSX is a preprocessor that adds XML syntax to JavaScript. JSX can be used without JavaScript but JSX makes React more elegant. It has tag names, attributes and children - similar to HTML. 
+
+iii. The components have <input> tags and onChange handlers to each <input> component. As the user enters text into the components, the onChange callbacks are fired and the state of the component is modified. Then the rendered value of the element is updated to reflect the current component state.
+	To save the comment, a request is sent to the server and then the form is
+cleared. An 'onSubmit' handler is ready to clear the form fields when the form is submitted. Then the list of comments is refreshed to include the new one. Data is flowed back up to the parent component by the parent's 'render' method. 
+
+iv. Props are immutable and the state is mutable. This distinction matters because props are passed from the parent and are 'owned' by the parent. To implement interactions, the state exists to the private 'this.state' component.
+
+b)
+i. When comments.json is changed correctly, the browser updates the new content in two seconds. 
+
+ii. loadCommentsFromServer() doesn't call render() becuase it is an ajax call so reloading/rendering the page isn't necessary.
+
+iii. Components should always represent the current state of view so the current data is displayed to the user. If the components are not displaying current states, then the user is looking at an older version of the site while the current version is in the background.
+
+iv. With this application, optimistic updates are not foolishness. The server would most likely not reject a comment from this form. But if for some reason it did, the comment would be deleted from the comment list.
