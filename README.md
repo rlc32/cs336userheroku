@@ -1,4 +1,4 @@
 # CS336 final project
 # Mark Davis & Russell Clousing
 
-This project is to take data from the Washington Post Police Shooting database and store in MLab. Then use a React UI to display the data in an organized fashion.
+Our goal is to take the Washington Post database of police shootings into a Mongo database. Then, a ReactJS frontend will display the data in an organized fashion.
