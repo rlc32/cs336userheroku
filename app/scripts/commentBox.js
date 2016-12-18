@@ -54,7 +54,8 @@ module.exports = React.createClass({
   render: function() {
     return (
       <div className="commentBox">
-        <h1>Victims</h1>
+        <h1>This website shows all fatal police shootings according to the Washington Post Database</h1>
+        <h2 className="listh2">The following names are the victims:</h2>
         <CommentList data={this.state.data} />
       </div>
     );
