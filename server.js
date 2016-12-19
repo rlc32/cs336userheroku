@@ -96,7 +96,7 @@ app.delete('/api/comments/:id', function(req, res) {
 
 app.use('*', express.static(APP_PATH));
 
-MongoClient.connect('mongodb://markruss:bjarne@ds113678.mlab.com:13678/police_data', function(err, dbConnection){
+MongoClient.connect('mongodb://markruss:'+ process.env.MONGO_PASSWORD +'@ds113678.mlab.com:13678/police_data', function(err, dbConnection){
     if (err) throw err;
     db = dbConnection;
 })
